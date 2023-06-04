@@ -1,0 +1,49 @@
+body {
+    height: 100%;
+}
+
+
+
+.card {
+    width: 380px;
+    height: 450px;
+    color: white;
+    font-size: 16px;
+    margin-left: 100px;
+
+}
+
+.card:hover {
+     
+    transition: 0.1s;
+    -webkit-box-shadow: 6px 11px 22px -4px rgba(101, 224, 109, 0.73);
+    -moz-box-shadow: 6px 11px 22px -4px rgba(101, 224, 109, 0.73);
+    box-shadow: 6px 11px 22px -4px rgba(101, 224, 109, 0.73);
+
+}
+
+.card .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media all and (max-width:414px) {
+    .card {
+        width: 300px;
+        height: 400px;
+    }
+}
+
+@media all and (min-width:765px) {
+    .card {
+        width: 350px;
+        height: 450px;
+    }
+}
+
+@media all and (min-width:1020px) {
+    .card {
+        width: 310px;
+        height: 450px;
+    }
+}

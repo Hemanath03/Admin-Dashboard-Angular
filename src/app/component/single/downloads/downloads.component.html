@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <p><span class="h2 me-3">Home</span><mat-icon>home</mat-icon>  <mat-icon>keyboard_tab</mat-icon><span class="h3 ms-3">Downloads</span></p>
+  <div class="container">
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element; "> {{element.position}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Downloads Column -->
+        <ng-container matColumnDef="Downloads">
+          <th mat-header-cell *matHeaderCellDef> Downloads </th>
+          <td mat-cell *matCellDef="let element"> <a href="#" class="link-primary">{{element.Downloads}} </a></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+
+  </div>
+</div>

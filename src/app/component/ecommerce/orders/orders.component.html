@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <p class="h2 text-white">eCommerce <mat-icon>last_page</mat-icon> Orders</p>
+    <div class="container table-responsive my-5 p-4">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+
+                    <th>#orders</th>
+                    <th>Company name</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Date</th>
+                    <th>View Details</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of dataorders;let i=index">
+                    <td><span><input type="checkbox"> </span> {{ data.orders+i}}</td>
+                    <td>Amazon </td>
+                    <td [ngClass]="{'text-success': data.status === 'fulfilled','text-warning': data.status === 'Confirmed','text-primary': data.status === 'Shipped'}">{{data.status}} </td>
+                    <td>{{data.total}} </td>
+                    <td>{{data.date}} </td>
+                    <td>
+                        <button class="btn btn-primary rounded-pill btn-xs">Details</button>
+                    </td>
+                    <td>
+                         <button class="btn btn-secondary   icon-display "><mat-icon>border_color</mat-icon></button>    
+                         <button class="btn btn-secondary ms-1   icon-display "><mat-icon>delete_forever</mat-icon></button>    
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

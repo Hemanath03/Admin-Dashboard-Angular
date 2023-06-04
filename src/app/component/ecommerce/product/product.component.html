@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6" *ngFor="let item of items">
+            <div class="card bg-dark mx-auto my-3">
+                <div>
+                    <p class="float-end bg-warning rounded-pill p-1 me-1 mt-1">{{ item.discount }}</p>
+                </div>
+                <img class="card-img-top mt-1 mx-auto  " src="{{ item.picture }}" alt="Product Image"
+                    style="width: 200px; height: 230px;">
+                <div class="card-body">
+                    <p class="card-title h-6 text-danger">{{ item.name }}</p>
+                    <div class="flex">
+                        <div>
+                            <p class="card-text"> {{ item.sales }} Sales</p>
+                            <img src="{{ item.rating }}" alt="Rating" style="width: 80px; height: 25px;">
+                        </div>
+                        <div>
+                            <p class="card-text">4.9 (186)</p>
+                            <p class="card-text"> <span class="text-decoration-line-through fw-bold">987</span> {{
+                                item.rate
+                                }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

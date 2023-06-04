@@ -1,0 +1,88 @@
+.overview {
+    width: 400px;
+    height: 100px;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+@media all and (min-width:300px) {
+    .overview {
+        width: 250px;
+        height: 100px;
+
+    }
+}
+
+@media all and (min-width:370px) {
+    .overview {
+        width: 330px;
+        height: 80px
+    }
+}
+
+@media all and (min-width:570px) {
+    .overview {
+        width: 240px;
+        height: 100px;
+    }
+}
+
+@media all and (min-width:770px) {
+    .overview {
+        width: 380px;
+    }
+}
+@media all and (min-width:1200px) {
+    .overview {
+        width: 300px;
+    }
+}
+
+@media all and (min-width:1430px) {
+    .overview {
+        width: 300px;
+    }
+}
+
+@media all and (min-width:1800px) {
+    .overview {
+        width: 420px
+    }
+}
+
+/* Custom styles for the table */
+ 
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table tbody td,
+th {
+    text-align: center;
+    line-height: 50px;
+}
+
+.red-color {
+    color: red;
+    font-size: medium;
+}
+
+.green-color {
+    color: green;
+    font-size: medium;
+}
+
+.line {
+    border-radius: 5px;
+    color: #04a527;
+}

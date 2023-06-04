@@ -1,0 +1,42 @@
+.wrapper {
+	height: 100%;
+	width: 100%;
+	color: white;
+	background: rgb(2, 0, 36);
+	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(30, 35, 68, 1) 52%, rgba(73, 21, 21, 1) 100%);
+
+	/* background: linear-gradient(70.8deg, rgb(253, 70, 90) 24%, rgb(31, 42, 147) 92.4%); */
+}
+
+.content-box {
+
+	font-size: 18px;
+	position: absolute;
+	top: 30%;
+	left: 40%;
+}
+
+@media all and (max-width:500px) {
+	.content-box {
+
+
+		position: absolute;
+		top: 30%;
+		left: 20%;
+	}
+}
+
+mat-icon {
+	font-size: 100px !important;
+	width: 100px;
+	height: 100px;
+
+}
+
+button {
+	width: 100px;
+}
+
+/* mat-icon{
+	transform: scale(5);
+} */
