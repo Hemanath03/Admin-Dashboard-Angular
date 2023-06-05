@@ -1,7 +1,7 @@
 <p class="h4 text-white">Earnings | ></p>
 <div class="row">
   <div class="col-lg-6 col-sm-6 col-xl-3 col-md-6 col-xxl-3">
-    <div class="overview p-4 m-3 bg-warning">
+    <div class="overview warning mx-auto">
       <p>Overview</p>
       <div class="flex">
         <p>158,700 $</p>
@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="col-lg-6 col-sm-6 col-xl-3 col-md-6  col-xxl-3">
-    <div class="overview p-4 m-3 bg-info">
+    <div class="overview info  mx-auto">
       <p>Spot Account</p>
       <div class="flex">
         <p>54,800 $</p>
@@ -19,17 +19,17 @@
     </div>
   </div>
   <div class="col-lg-6 col-sm-6 col-xl-3 col-md-6  col-xxl-3">
-    <div class="overview p-4 m-3 bg-success">
+    <div class="overview success  mx-auto">
       <p>Derivatives</p>
       <div class="flex">
         <p>103,900 $</p>
-        <p><mat-icon>arrow_upward</mat-icon></p>
+        <p>$&nbsp;</p>
       </div>
     </div>
   </div>
   <div class="col-lg-6 col-sm-6 col-xl-3 col-md-6  col-xxl-3s">
-    <div class="overview p-4 m-3 bg-primary">
-      <p>Total Revenue this month</p>
+    <div class="overview primary  mx-auto">
+      <p>Total Revenue </p>
       <div class="flex">
         <p>5 %</p>
         <p><mat-icon>percentage</mat-icon></p>
@@ -38,12 +38,12 @@
   </div>
 </div>
 <!-- charts -->
-<div class="row m-4">
-  <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 mx-auto">
+<div class="row mt-4">
+  <div class="col-12 mx-auto">
     <div class="line" [chart]="lineChart"></div>
   </div>
 </div>
-<div class="row m-4">
+<div class="row ">
   <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 mx-auto mt-4">
     <div class="pie" [chart]="Assets"></div>
   </div>
@@ -51,6 +51,7 @@
     <div class="pie" [chart]="Holdings"></div>
   </div>
 </div>
+
 
 <!-- holdings -->
 <div class="container table-responsive my-5 p-4">
@@ -73,11 +74,11 @@
         <td>{{ i+1 }}</td>
         <td><span><img [src]="data.picturePath" alt="Picture" class="img-fluid" width="20" height="20"></span> {{
           data.name }} </td>
-        <td [ngClass]="{ 'text-danger': data.oneHourChange < 0, 'text-success': data.oneHourChange >= 0.1 }">{{
+        <td [ngClass]="{ 'text-danger': data.oneHourChange <= 0, 'text-success': data.oneHourChange >= 0.01 }">{{
           data.oneHourChange }}%</td>
-        <td [ngClass]="{ 'text-danger': data.oneHourChange < 0, 'text-success': data.oneHourChange >= 0.1 }">{{
+        <td [ngClass]="{ 'text-danger': data.twentyFourHourChange < 0, 'text-success': data.twentyFourHourChange >= 0.01 }">{{
           data.twentyFourHourChange }}%</td>
-        <td [ngClass]="{ 'text-danger': data.oneHourChange < 0, 'text-success': data.oneHourChange >= 0.1 }">{{
+        <td [ngClass]="{ 'text-danger': data.sevenDayChange <= 0, 'text-success': data.sevenDayChange >= 0.01 }">{{
           data.sevenDayChange }}%</td>
         <td>{{ data.marketCap | number }}</td>
         <td>{{ data.volume | number }}</td>
@@ -86,4 +87,5 @@
     </tbody>
   </table>
 </div>
+
 

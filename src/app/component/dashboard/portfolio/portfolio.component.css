@@ -5,6 +5,25 @@
     font-weight: bold;
     color: rgb(0, 0, 0);
     border-radius: 10px;
+    margin-top: 25px;
+    padding: 25px;
+}
+
+/* content box color */
+.warning {
+    background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+}
+
+.primary {
+    background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, rgba(4, 189, 228, 1) 0%, rgba(2, 83, 185, 1) 100.2%);
+}
+
+.info {
+    background-image: linear-gradient(109.6deg, rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%);
+}
+
+.success {
+    background-image: radial-gradient(circle 759px at -6.7% 50%, rgba(80, 131, 73, 1) 0%, rgba(140, 209, 131, 1) 26.2%, rgba(178, 231, 170, 1) 50.6%, rgba(144, 213, 135, 1) 74.1%, rgba(75, 118, 69, 1) 100.3%);
 }
 
 .flex {
@@ -13,55 +32,50 @@
     align-items: center;
 }
 
-
-
-@media all and (min-width:300px) {
+@media all and (max-width:425px) {
     .overview {
-        width: 250px;
-        height: 100px;
-
+        width: 300px;
     }
 }
 
-@media all and (min-width:370px) {
+@media all and (min-width:576px) {
     .overview {
-        width: 330px;
-        height: 80px
+        width: 280px;
     }
 }
 
-@media all and (min-width:570px) {
+@media all and (min-width:768px) {
     .overview {
-        width: 240px;
-        height: 100px;
+        width: 320px;
     }
 }
 
-@media all and (min-width:770px) {
+@media all and (min-width:992px) {
     .overview {
-        width: 380px;
+        width: 430px;
     }
 }
+
 @media all and (min-width:1200px) {
     .overview {
-        width: 300px;
+        width: 280px;
     }
 }
 
-@media all and (min-width:1430px) {
+@media all and (min-width:1400px) {
     .overview {
-        width: 300px;
+        width: 320px;
     }
 }
 
-@media all and (min-width:1800px) {
+@media all and (min-width:1600px) {
     .overview {
-        width: 420px
+        width: 400px;
     }
 }
 
 /* Custom styles for the table */
- 
+
 .table-responsive {
     overflow-x: auto;
 }
@@ -72,17 +86,9 @@ th {
     line-height: 50px;
 }
 
-.red-color {
-    color: red;
-    font-size: medium;
-}
 
-.green-color {
-    color: green;
-    font-size: medium;
-}
-
-.line {
-    border-radius: 5px;
-    color: #04a527;
+@media all and (max-width:425px) {
+    .line {
+        height: 300px;
+    }
 }

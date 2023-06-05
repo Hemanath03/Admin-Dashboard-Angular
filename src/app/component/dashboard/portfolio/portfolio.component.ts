@@ -20,6 +20,8 @@ interface MyData {
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent {
+
+  // data list
   myDataList: MyData[] = [
     {
       name: "Bitcoin",
@@ -305,7 +307,7 @@ export class PortfolioComponent {
 
   ];
 
-
+  // line chart
   lineChart = new Chart({
     chart: {
       type: 'line',
@@ -352,24 +354,25 @@ export class PortfolioComponent {
       {
         name: 'Month',
         data: [0, 10, 2, 3, 6, 9, 17, 35, 20, 10, 15, 20],
-
+        lineTension: 0.3,
         color: '#04a527'
       } as any,
       {
         name: 'days',
         data: [0, 20, 30, 5, 20, 16, 10, 2, 3, 6, 15, 5],
-
+        lineTension: 0.3,
         color: 'yellow'
       } as any,
       {
         name: 'days',
         data: [0, 16, 15, 10, 35, 10, 6, 30, 17, 25, 3, 30,],
-
+        lineTension: 0.5,
         color: 'blue'
       } as any
     ]
   })
 
+  // pie chart spot
   Assets = new Chart({
     chart: {
       type: 'pie',
@@ -385,7 +388,12 @@ export class PortfolioComponent {
       pie: {
         dataLabels: {
           enabled: true,
-          format: '<b>{point.name}</b>: {point.percentage:.1f}%'
+          format: '<b>{point.name}</b>: {point.percentage:.1f}%',
+          distance: -50,
+          y: -30,
+          style: {
+            color: 'white',
+          }
         }
       }
     },
@@ -393,16 +401,18 @@ export class PortfolioComponent {
       {
         name: 'Holdings %',
         data: [
-          ['Spot', 40],
-          ['Derivatives', 25],
-          ['Funding', 15],
-          ['Grid', 10],
-          ['Copy Trading', 20],
+          ['Spot', 50],
+          ['Derivatives', 15],
+          ['Funding', 10],
+          ['Grid', 5],
+          ['Copy Trading', 15],
           ['NFTs', 5]
         ]
       } as any
     ]
   });
+
+  // holdings
   Holdings = new Chart({
     chart: {
       type: 'pie',
@@ -418,8 +428,18 @@ export class PortfolioComponent {
       pie: {
         dataLabels: {
           enabled: true,
-          format: '<b>{point.name}</b>: {point.percentage:.1f}%'
-        }
+          format: '<b>{point.name}</b>: {point.percentage:.1f}%',
+          distance: -50,
+          y: -20,
+          style: {
+            fontWeight: 'bold',
+            color: 'white'
+          }
+        },
+        center: ['50%', '50%']
+
+
+
       }
     },
     series: [
@@ -438,5 +458,6 @@ export class PortfolioComponent {
       } as any
     ]
   });
+
 }
 

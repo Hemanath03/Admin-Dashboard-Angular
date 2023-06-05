@@ -10,7 +10,6 @@
 .example-container {
   width: 100%;
   height: 100%;
-  /* background: #383838; */
   background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
  
 }
@@ -24,8 +23,8 @@
 
 .example-sidenav {
   padding: 20px;
-  background: linear-gradient(109.6deg, rgb(6, 2, 2) 32.4%, rgb(137, 30, 47) 98.8%);
-  border-right: 5px outset rgb(0, 119, 255);
+  background: linear-gradient(109.6deg, rgb(6, 2, 2) 32.4%, rgb(27, 138, 228) 98.8%);
+  
 }
 
 .web {

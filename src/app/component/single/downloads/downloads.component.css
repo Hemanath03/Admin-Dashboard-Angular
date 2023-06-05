@@ -1,10 +1,20 @@
 html,body{
     height: 100%;
-}
-.mat-elevation-z8{
-    background: #000;
-}
- 
+} 
 p{
     color: white;
 }
+/*  */
+/* Assuming you have a class named "dark-table" applied to the table container */
+
+
+.mat-row:nth-child(2n+1){
+    background-color: #e4f0ec;
+  }
+  .mat-row:not(:nth-child(4n+1)){
+    background-color:#ffffff;
+  }
+
+  th{
+    background: #ff0303;
+  }

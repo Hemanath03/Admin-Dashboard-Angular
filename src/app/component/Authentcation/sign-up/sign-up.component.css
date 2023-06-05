@@ -49,10 +49,22 @@
       display: none;
     }
   }
-  @media (max-width: 425px) {
+  @media (max-width: 576px) {
     .hr-lines:before,
     .hr-lines:after {
-       width: 50px;
+       width: 60px;
+    }
+  }
+  @media (min-width: 576px) {
+    .hr-lines:before,
+    .hr-lines:after {
+       width: 70px;
+    }
+  }
+  @media (min-width: 1400px) {
+    .hr-lines:before,
+    .hr-lines:after {
+       width: 100px;
     }
   }
   

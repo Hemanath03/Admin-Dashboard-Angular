@@ -3,7 +3,7 @@
         aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
     </button>
-    <span class="admin">Admin</span>
+    <span class="admin">Admin Dashboard</span>
 
     <span class="example-spacer"></span>
 
@@ -22,11 +22,11 @@
     </span>
 </mat-toolbar>
 <mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" opened mode="over">
+    <mat-drawer #drawer class="example-sidenav"  mode="over">
         <app-side-nav></app-side-nav>
     </mat-drawer>
     <div class="example-sidenav-content">
-        <div class="container-fluid mt-4">
+        <div class="container-fluid">
             <router-outlet></router-outlet>
         </div>
     </div>
